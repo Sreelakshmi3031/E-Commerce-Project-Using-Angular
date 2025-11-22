@@ -1,0 +1,93 @@
+{
+  "seller": [
+    {
+      "id": "9b86",
+      "name": "dummy",
+      "email": "dummy@seller.com",
+      "password": "dummy123"
+    },
+    {
+      "id": "1cf4",
+      "name": "dummy1",
+      "email": "dummy1@seller.com",
+      "password": "dummy1123"
+    },
+    {
+      "id": "9ef8",
+      "name": "test",
+      "email": "test",
+      "password": "test"
+    },
+    {
+      "id": "333a",
+      "name": "test1",
+      "email": "test1",
+      "password": "test1"
+    },
+    {
+      "id": "afc6",
+      "name": "test",
+      "email": "test1908",
+      "password": "test1908"
+    },
+    {
+      "id": "4915",
+      "name": "jd",
+      "email": "jd",
+      "password": "jd"
+    },
+    {
+      "id": "f70e",
+      "name": "jd",
+      "email": "jd",
+      "password": "jd"
+    },
+    {
+      "id": "4bf9",
+      "name": "jds",
+      "email": "jds",
+      "password": "jds"
+    },
+    {
+      "id": "dace",
+      "name": "jds1",
+      "email": "jds1",
+      "password": "jds1"
+    },
+    {
+      "id": "2a5a",
+      "name": "jds2",
+      "email": "jds2",
+      "password": "jds2"
+    },
+    {
+      "id": "7887",
+      "name": "jds3",
+      "email": "jds3",
+      "password": "jds3"
+    },
+    {
+      "id": "8b83",
+      "name": "jds4",
+      "email": "jds4",
+      "password": "jds4"
+    },
+    {
+      "id": "a160",
+      "name": "dummy1",
+      "email": "dummy1@seller.com",
+      "password": "dummy1123"
+    }
+  ],
+  "products": [
+    {
+      "id": "a319",
+      "name": "Iphone 17",
+      "price": "120000",
+      "category": "Mobile",
+      "color": "Pista Green",
+      "imageUrl": "https://www.simplymac.com/wp-content/uploads/iphone-17-series.jpg",
+      "description": "Iphone New Series"
+    }
+  ]
+}
