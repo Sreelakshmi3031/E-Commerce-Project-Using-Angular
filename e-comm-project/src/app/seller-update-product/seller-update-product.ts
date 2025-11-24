@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../services/product';
 import { product } from '../data-type';
 
@@ -12,15 +12,32 @@ import { product } from '../data-type';
 })
 export class SellerUpdateProduct implements OnInit {
   productData: undefined | product;
-  constructor(private route: ActivatedRoute, private product: Product) {}
+  updateProductMessage: undefined | string;
+  productId: null | string = null;
+  constructor(
+    private route: ActivatedRoute,
+    private product: Product,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    let productId = this.route.snapshot.paramMap.get('id');
-    console.warn(productId);
-    productId &&
-      this.product.getProductById(productId).subscribe((response) => {
+    this.productId = this.route.snapshot.paramMap.get('id');
+    console.warn(this.productId);
+    this.productId &&
+      this.product.getProductById(this.productId).subscribe((response) => {
         this.productData = response;
       });
   }
-  editProduct(data: any, formValue: any) {}
+  editProduct(data: product, editProductForm: any) {
+    this.product.updateProduct(data, this.productId).subscribe((response) => {
+      if (response) {
+        this.updateProductMessage = 'Product Updated Successfully.';
+        editProductForm.reset();
+      }
+      setTimeout(() => {
+        this.updateProductMessage = undefined;
+        this.router.navigateByUrl('/seller-home');
+      }, 3000);
+    });
+  }
 }

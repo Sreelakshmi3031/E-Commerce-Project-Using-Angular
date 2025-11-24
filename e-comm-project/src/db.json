@@ -77,6 +77,12 @@
       "name": "dummy1",
       "email": "dummy1@seller.com",
       "password": "dummy1123"
+    },
+    {
+      "id": "aa2c",
+      "name": "dummy",
+      "email": "dummy@seller.com",
+      "password": "dummy123"
     }
   ],
   "products": [
@@ -90,22 +96,22 @@
       "image": "https://www.simplymac.com/wp-content/uploads/iphone-17-series.jpg"
     },
     {
-      "id": "4faf",
       "name": "Samsung",
-      "price": "200000",
+      "price": "500000",
       "color": "Blue",
       "category": "Mobile",
       "description": "Samsung Series",
-      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2501/gallery/levant-galaxy-s25-s938-sm-s938bzbimea-thumb-544743410"
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2501/gallery/levant-galaxy-s25-s938-sm-s938bzbimea-thumb-544743410",
+      "id": "4faf"
     },
     {
-      "id": "996c",
       "name": "Lenovo",
-      "price": "60000",
+      "price": "70000",
       "color": "Black",
       "category": "Laptop",
       "description": "Lenovo Laptop",
-      "image": "https://p3-ofp.static.pub//fes/cms/2024/05/17/t7s0iw77gpx1asifnfouhk4y23pvh0503560.png"
+      "image": "https://p3-ofp.static.pub//fes/cms/2024/05/17/t7s0iw77gpx1asifnfouhk4y23pvh0503560.png",
+      "id": "996c"
     }
   ]
 }
