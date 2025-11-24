@@ -1,5 +1,6 @@
 <div class="product-list">
   <h1>All Product List</h1>
+  <p class="success-msg">{{ productMessage }}</p>
   <table>
     <thead>
       <tr>
@@ -9,10 +10,11 @@
         <th>Color</th>
         <th>Category</th>
         <th>Description</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      @for (item of productList; track item.name) {
+      @for (item of productList; track item.id) {
       <tr>
         <td><img src="{{ item.image }}" /></td>
         <td>{{ item.name }}</td>
@@ -20,6 +22,7 @@
         <td>{{ item.color }}</td>
         <td>{{ item.category }}</td>
         <td>{{ item.description }}</td>
+        <td><button (click)="deleteProduct(item.id)">Delete</button></td>
       </tr>
       }
     </tbody>
