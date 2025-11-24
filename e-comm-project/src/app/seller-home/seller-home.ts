@@ -2,18 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../services/product';
 import { product } from '../data-type';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-seller-home',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, RouterLink],
   templateUrl: './seller-home.html',
   styleUrl: './seller-home.scss',
 })
 export class SellerHome implements OnInit {
   productList: undefined | product[];
   productMessage: string | undefined;
-  icon = faTrash;
+  deleteIcon = faTrash;
+  editIcon = faEdit;
   constructor(private product: Product) {}
 
   ngOnInit(): void {
