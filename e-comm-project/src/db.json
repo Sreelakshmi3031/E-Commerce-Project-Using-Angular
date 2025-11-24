@@ -81,13 +81,22 @@
   ],
   "products": [
     {
-      "id": "a319",
+      "id": "e1d3",
       "name": "Iphone 17",
       "price": "120000",
-      "category": "Mobile",
       "color": "Pista Green",
-      "imageUrl": "https://www.simplymac.com/wp-content/uploads/iphone-17-series.jpg",
-      "description": "Iphone New Series"
+      "category": "Mobile",
+      "description": "Iphone New Series",
+      "image": "https://www.simplymac.com/wp-content/uploads/iphone-17-series.jpg"
+    },
+    {
+      "id": "4faf",
+      "name": "Samsung",
+      "price": "200000",
+      "color": "Blue",
+      "category": "Mobile",
+      "description": "Samsung Series",
+      "image": "https://www.simplymac.com/wp-content/uploads/iphone-17-series.jpg"
     }
   ]
 }
