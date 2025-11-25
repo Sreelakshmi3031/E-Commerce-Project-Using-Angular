@@ -112,6 +112,24 @@
       "description": "Lenovo Laptop",
       "image": "https://p3-ofp.static.pub//fes/cms/2024/05/17/t7s0iw77gpx1asifnfouhk4y23pvh0503560.png",
       "id": "996c"
+    },
+    {
+      "id": "ae7d",
+      "name": "Hp Laptop",
+      "price": "50000",
+      "color": "Grey",
+      "category": "Laptop",
+      "description": "HP Laptop",
+      "image": "https://www.hp.com/content/dam/sites/worldwide/personal-computers/consumer/laptops-and-2-in-1s/new/bf-updates/media@2x1.jpg"
+    },
+    {
+      "id": "49bc",
+      "name": "OnePlus",
+      "price": "40000",
+      "color": "Green",
+      "category": "Mobile",
+      "description": "One Plus Mobile",
+      "image": "https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
     }
   ]
 }

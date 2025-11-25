@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Product } from '../services/product';
+import { product } from '../data-type';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+export class Home implements OnInit {
+  popularProducts: undefined | product[];
+
+  constructor(private product: Product) {}
+
+  ngOnInit(): void {
+    this.product.getMainProducts().subscribe((response) => {
+      this.popularProducts = response;
+    });
+  }
 }

@@ -30,4 +30,8 @@ export class Product {
       product
     );
   }
+
+  getMainProducts() {
+    return this.http.get<product[]>('http://localhost:3000/products?_limit=4');
+  }
 }
