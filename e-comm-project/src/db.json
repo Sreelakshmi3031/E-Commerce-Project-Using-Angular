@@ -130,6 +130,51 @@
       "category": "Mobile",
       "description": "One Plus Mobile",
       "image": "https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
+    },
+    {
+      "id": "49bc",
+      "name": "OnePlus",
+      "price": "40000",
+      "color": "Green",
+      "category": "Mobile",
+      "description": "One Plus Mobile",
+      "image": "https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
+    },
+    {
+      "id": "49bc",
+      "name": "OnePlus",
+      "price": "40000",
+      "color": "Green",
+      "category": "Mobile",
+      "description": "One Plus Mobile",
+      "image": "https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
+    },
+    {
+      "id": "49bc",
+      "name": "OnePlus",
+      "price": "40000",
+      "color": "Green",
+      "category": "Mobile",
+      "description": "One Plus Mobile",
+      "image": "https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
+    },
+    {
+      "name": "Samsung",
+      "price": "500000",
+      "color": "Blue",
+      "category": "Mobile",
+      "description": "Samsung Series",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2501/gallery/levant-galaxy-s25-s938-sm-s938bzbimea-thumb-544743410",
+      "id": "4faf"
+    },
+    {
+      "name": "Samsung",
+      "price": "500000",
+      "color": "Blue",
+      "category": "Mobile",
+      "description": "Samsung Series",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2501/gallery/levant-galaxy-s25-s938-sm-s938bzbimea-thumb-544743410",
+      "id": "4faf"
     }
   ]
 }

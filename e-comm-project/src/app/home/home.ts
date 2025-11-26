@@ -11,12 +11,24 @@ import { product } from '../data-type';
 })
 export class Home implements OnInit {
   popularProducts: undefined | product[];
+  trendingProducts: undefined | product[];
 
   constructor(private product: Product) {}
 
   ngOnInit(): void {
+    this.getMainProducts();
+    this.getTrendyProducts();
+  }
+
+  getMainProducts() {
     this.product.getMainProducts().subscribe((response) => {
       this.popularProducts = response;
+    });
+  }
+
+  getTrendyProducts() {
+    this.product.getTrendingProducts().subscribe((response) => {
+      this.trendingProducts = response;
     });
   }
 }

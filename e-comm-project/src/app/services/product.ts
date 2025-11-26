@@ -34,4 +34,8 @@ export class Product {
   getMainProducts() {
     return this.http.get<product[]>('http://localhost:3000/products?_limit=4');
   }
+
+  getTrendingProducts() {
+    return this.http.get<product[]>('http://localhost:3000/products?_limit=8');
+  }
 }
