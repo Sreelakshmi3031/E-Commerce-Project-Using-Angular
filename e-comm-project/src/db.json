@@ -183,6 +183,12 @@
       "email": "test@abc.com",
       "password": "abc123",
       "id": 1
+    },
+    {
+      "name": "abc",
+      "email": "abc@test.com",
+      "password": "abc123",
+      "id": 2
     }
   ]
 }

@@ -13,6 +13,7 @@ import { product } from '../data-type';
 export class Header implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
+  userName: string = '';
   searchedProducts: undefined | product[];
   constructor(private route: Router, private product: Product) {}
 
@@ -22,11 +23,14 @@ export class Header implements OnInit {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           console.warn('seller area');
           this.menuType = 'seller';
-          if (localStorage.getItem('seller')) {
-            let sellerStore = localStorage.getItem('seller');
-            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-            this.sellerName = sellerData?.name;
-          }
+          let sellerStore = localStorage.getItem('seller');
+          let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+          this.sellerName = sellerData?.name;
+        } else if (localStorage.getItem('user')) {
+          let userStore = localStorage.getItem('user');
+          let userData = userStore && JSON.parse(userStore);
+          this.userName = userData.name;
+          this.menuType = 'user';
         } else {
           console.warn('outside seller');
           this.menuType = 'default';
@@ -35,9 +39,14 @@ export class Header implements OnInit {
     });
   }
 
-  logout() {
+  sellerLogout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
+  }
+
+  userLogout() {
+    localStorage.removeItem('user');
+    this.route.navigateByUrl('/user-auth');
   }
 
   searchProducts(query: KeyboardEvent) {

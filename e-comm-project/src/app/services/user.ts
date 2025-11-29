@@ -19,4 +19,10 @@ export class User {
         }
       });
   }
+
+  userAuthReload() {
+    if (localStorage.getItem('user')) {
+      this.router.navigateByUrl('/');
+    }
+  }
 }
