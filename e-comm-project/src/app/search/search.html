@@ -1,84 +1,22 @@
+@for (item of searchedProducts; track item.id) {
 <div class="row search-item">
   <div class="col-sm-3">
-    <img
-      src="https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
-      alt=""
-    />
+    <img src="{{ item?.image }}" alt="" />
   </div>
   <div class="col-sm-8 details">
-    <h6>Product Name</h6>
-    <p><b>Price: 10000</b></p>
-    <p><span>Color: Red</span><span>Category: Mobile</span></p>
-    <p>A Product Search UI</p>
+    <h6>{{ item?.name }}</h6>
+    <p>
+      <b>Price: {{ item?.price }}</b>
+    </p>
+    <p>
+      <span>Color: {{ item?.color }}</span
+      ><span>Category: {{ item?.category }}</span>
+    </p>
+    <p>{{ item?.description }}</p>
   </div>
 </div>
-<div class="row search-item">
-  <div class="col-sm-3">
-    <img
-      src="https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
-      alt=""
-    />
-  </div>
-  <div class="col-sm-8 details">
-    <h6>Product Name</h6>
-    <p><b>Price: 10000</b></p>
-    <p><span>Color: Red</span><span>Category: Mobile</span></p>
-    <p>A Product Search UI</p>
-  </div>
-</div>
-<div class="row search-item">
-  <div class="col-sm-3">
-    <img
-      src="https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
-      alt=""
-    />
-  </div>
-  <div class="col-sm-8 details">
-    <h6>Product Name</h6>
-    <p><b>Price: 10000</b></p>
-    <p><span>Color: Red</span><span>Category: Mobile</span></p>
-    <p>A Product Search UI</p>
-  </div>
-</div>
-<div class="row search-item">
-  <div class="col-sm-3">
-    <img
-      src="https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
-      alt=""
-    />
-  </div>
-  <div class="col-sm-8 details">
-    <h6>Product Name</h6>
-    <p><b>Price: 10000</b></p>
-    <p><span>Color: Red</span><span>Category: Mobile</span></p>
-    <p>A Product Search UI</p>
-  </div>
-</div>
-<div class="row search-item">
-  <div class="col-sm-3">
-    <img
-      src="https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
-      alt=""
-    />
-  </div>
-  <div class="col-sm-8 details">
-    <h6>Product Name</h6>
-    <p><b>Price: 10000</b></p>
-    <p><span>Color: Red</span><span>Category: Mobile</span></p>
-    <p>A Product Search UI</p>
-  </div>
-</div>
-<div class="row search-item">
-  <div class="col-sm-3">
-    <img
-      src="https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
-      alt=""
-    />
-  </div>
-  <div class="col-sm-8 details">
-    <h6>Product Name</h6>
-    <p><b>Price: 10000</b></p>
-    <p><span>Color: Red</span><span>Category: Mobile</span></p>
-    <p>A Product Search UI</p>
-  </div>
-</div>
+} @if (!searchedProducts?.length) {
+
+<p class="noData">No Items to display</p>
+
+}
