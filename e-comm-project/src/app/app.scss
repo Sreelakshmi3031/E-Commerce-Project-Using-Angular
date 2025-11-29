@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full page height */
+}
+
+.content-wrapper {
+  flex: 1; /* THIS pushes footer down */
+  display: block;
+}

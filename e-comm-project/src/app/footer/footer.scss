@@ -1,0 +1,15 @@
+.footer {
+  padding: 10px;
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li a {
+    color: blue;
+    text-decoration: none;
+  }
+}
