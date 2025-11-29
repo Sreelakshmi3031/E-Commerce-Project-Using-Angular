@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Product } from '../services/product';
 import { product } from '../data-type';
 import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-search',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './search.html',
   styleUrl: './search.scss',
 })
