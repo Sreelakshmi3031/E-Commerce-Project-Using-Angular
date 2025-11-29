@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Product } from '../services/product';
 import { product } from '../data-type';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [NgbModule],
+  imports: [NgbModule, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

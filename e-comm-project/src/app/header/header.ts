@@ -60,4 +60,8 @@ export class Header implements OnInit {
   onSearch(val: string) {
     this.route.navigateByUrl(`/search/${val}`);
   }
+
+  redirectToDetails(id: string) {
+    this.route.navigateByUrl(`details/${id}`);
+  }
 }
