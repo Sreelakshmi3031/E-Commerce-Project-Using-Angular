@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { signUp } from '../data-type';
+import { User } from '../services/user';
 
 @Component({
   selector: 'app-user-auth',
@@ -8,8 +9,12 @@ import { signUp } from '../data-type';
   templateUrl: './user-auth.html',
   styleUrl: './user-auth.scss',
 })
-export class UserAuth {
+export class UserAuth implements OnInit {
+  constructor(private user: User) {}
+
+  ngOnInit(): void {}
+
   userSIgnUp(data: signUp) {
-    console.warn(data);
+    this.user.userSignUp(data);
   }
 }
