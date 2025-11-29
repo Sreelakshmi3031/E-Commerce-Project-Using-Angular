@@ -3,8 +3,20 @@
   @if(menuType==='default') {
 
   <div class="nav-search">
-    <input type="text" placeholder="Search Products" />
+    <input
+      type="text"
+      (keyup)="searchProducts($event)"
+      placeholder="Search Products"
+      (blur)="removeSearchResult()"
+    />
     <button>Search</button>
+    <ul class="suggested-result">
+      @for (item of searchedProducts; track item.id){
+      <li>
+        <a>{{ item?.name }}</a>
+      </li>
+      }
+    </ul>
   </div>
   } @switch(menuType) { @case ('default') {
 

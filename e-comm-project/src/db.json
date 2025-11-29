@@ -123,7 +123,16 @@
       "image": "https://www.hp.com/content/dam/sites/worldwide/personal-computers/consumer/laptops-and-2-in-1s/new/bf-updates/media@2x1.jpg"
     },
     {
-      "id": "49bc",
+      "id": "49ba",
+      "name": "OnePlus",
+      "price": "40000",
+      "color": "Green",
+      "category": "Mobile",
+      "description": "One Plus Mobile",
+      "image": "https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
+    },
+    {
+      "id": "49be",
       "name": "OnePlus",
       "price": "40000",
       "color": "Green",
@@ -141,16 +150,7 @@
       "image": "https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
     },
     {
-      "id": "49bc",
-      "name": "OnePlus",
-      "price": "40000",
-      "color": "Green",
-      "category": "Mobile",
-      "description": "One Plus Mobile",
-      "image": "https://image01-in.oneplus.net/media/202505/22/b87582171e356d38cde670bf7a09602f.png?x-amz-process=image/format,webp/quality,Q_80"
-    },
-    {
-      "id": "49bc",
+      "id": "49bd",
       "name": "OnePlus",
       "price": "40000",
       "color": "Green",
@@ -165,7 +165,7 @@
       "category": "Mobile",
       "description": "Samsung Series",
       "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2501/gallery/levant-galaxy-s25-s938-sm-s938bzbimea-thumb-544743410",
-      "id": "4faf"
+      "id": "4fah"
     },
     {
       "name": "Samsung",
@@ -174,7 +174,7 @@
       "category": "Mobile",
       "description": "Samsung Series",
       "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2501/gallery/levant-galaxy-s25-s938-sm-s938bzbimea-thumb-544743410",
-      "id": "4faf"
+      "id": "4fag"
     }
   ]
 }

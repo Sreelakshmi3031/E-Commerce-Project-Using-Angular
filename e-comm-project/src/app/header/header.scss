@@ -103,4 +103,24 @@
       }
     }
   }
+
+  .suggested-result {
+    position: absolute;
+    display: list-item;
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    top: 43px;
+    border: 1px solid #ddd;
+
+    li {
+      border: 1px solid #fff;
+      padding: 5px;
+
+      a {
+        cursor: pointer;
+        color: blue;
+      }
+    }
+  }
 }
