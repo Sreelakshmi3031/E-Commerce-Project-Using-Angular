@@ -4,12 +4,13 @@
 
   <div class="nav-search">
     <input
+      #searchInput
       type="text"
       (keyup)="searchProducts($event)"
       placeholder="Search Products"
       (blur)="removeSearchResult()"
     />
-    <button>Search</button>
+    <button (click)="onSearch(searchInput.value)">Search</button>
     <ul class="suggested-result">
       @for (item of searchedProducts; track item.id){
       <li>

@@ -56,4 +56,8 @@ export class Header implements OnInit {
   removeSearchResult() {
     this.searchedProducts = undefined;
   }
+
+  onSearch(val: string) {
+    this.route.navigateByUrl(`/search/${val}`);
+  }
 }
