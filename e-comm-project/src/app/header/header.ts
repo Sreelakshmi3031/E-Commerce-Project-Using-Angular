@@ -15,6 +15,7 @@ export class Header implements OnInit {
   sellerName: string = '';
   userName: string = '';
   searchedProducts: undefined | product[];
+  cartItems: number = 0;
   constructor(private route: Router, private product: Product) {}
 
   ngOnInit(): void {
@@ -36,6 +37,13 @@ export class Header implements OnInit {
           this.menuType = 'default';
         }
       }
+    });
+    let cartData = localStorage.getItem('localCartData');
+    if (cartData) {
+      this.cartItems = JSON.parse(cartData).length;
+    }
+    this.product.cartData.subscribe((result) => {
+      this.cartItems = result.length;
     });
   }
 
