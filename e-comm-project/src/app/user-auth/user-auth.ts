@@ -22,7 +22,7 @@ export class UserAuth implements OnInit {
   }
 
   userLogin(data: login) {
-    console.warn(data);
+    this.user.userLogin(data);
   }
 
   openLogin() {
