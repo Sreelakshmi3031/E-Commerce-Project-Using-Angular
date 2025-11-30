@@ -52,6 +52,9 @@ export class UserAuth implements OnInit {
             }, 500);
           });
         }
+        setTimeout(() => {
+          this.product.getCartList(userId);
+        }, 2000);
       }
     });
   }

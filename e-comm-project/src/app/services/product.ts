@@ -74,4 +74,16 @@ export class Product {
   addToCart(cartData: cart) {
     return this.http.post('http://localhost:3000/cart', cartData);
   }
+
+  getCartList(userId: number) {
+    return this.http
+      .get<product[]>(`http://localhost:3000/cart?userId=${userId}`, {
+        observe: 'response',
+      })
+      .subscribe((response) => {
+        if (response && response.body) {
+          this.cartData.emit(response.body);
+        }
+      });
+  }
 }

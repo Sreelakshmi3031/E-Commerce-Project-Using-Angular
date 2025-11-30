@@ -18,6 +18,7 @@ export interface product {
   description: string;
   id: string;
   quantity: undefined | number;
+  productId: undefined | number;
 }
 
 export interface cart {
