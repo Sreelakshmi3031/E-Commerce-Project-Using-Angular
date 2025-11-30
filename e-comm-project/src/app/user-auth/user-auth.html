@@ -1,31 +1,66 @@
 <div class="user-auth">
-  <h1>User Sign-up</h1>
-  <form
-    class="common-form"
-    #userSignUpForm="ngForm"
-    (ngSubmit)="userSIgnUp(userSignUpForm.value)"
-  >
-    <input
-      type="text"
-      class="form-input"
-      placeholder="Enter User Name"
-      name="name"
-      ngModel
-    />
-    <input
-      type="text"
-      class="form-input"
-      placeholder="Enter User Email"
-      name="email"
-      ngModel
-    />
-    <input
-      type="password"
-      class="form-input"
-      placeholder="Enter User Password"
-      name="password"
-      ngModel
-    />
-    <button class="form-button">Sign Up</button>
-  </form>
+  @if (!showLoginForm) {
+  <div class="user-signup">
+    <h1>User Sign-up</h1>
+    <form
+      class="common-form"
+      #userSignUpForm="ngForm"
+      (ngSubmit)="userSignUp(userSignUpForm.value)"
+    >
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter User Name"
+        name="name"
+        ngModel
+      />
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter User Email"
+        name="email"
+        ngModel
+      />
+      <input
+        type="password"
+        class="form-input"
+        placeholder="Enter User Password"
+        name="password"
+        ngModel
+      />
+      <button class="form-button">Sign Up</button>
+      <a class="auth-toggle-link" (click)="openLogin()"
+        >Already have an account? Click to Login</a
+      >
+    </form>
+  </div>
+  } @if (showLoginForm) {
+  <div class="user-login">
+    <h1>User Login</h1>
+    <form
+      class="common-form"
+      #userLoginForm="ngForm"
+      (ngSubmit)="userLogin(userLoginForm.value)"
+    >
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter User Email"
+        name="email"
+        ngModel
+      />
+      <input
+        type="password"
+        class="form-input"
+        placeholder="Enter User Password"
+        name="password"
+        ngModel
+      />
+      <button class="form-button">Login</button>
+      <a class="auth-toggle-link" (click)="openSignUp()"
+        >Don't have an account? Click to Signup</a
+      >
+    </form>
+  </div>
+  }
 </div>
