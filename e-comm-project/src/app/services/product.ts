@@ -44,4 +44,16 @@ export class Product {
       `http://localhost:3000/products?q=${query}`
     );
   }
+
+  localAddToCart(data: product) {
+    let earlyCartData = [];
+    let cartData = localStorage.getItem('localCartData');
+    if (!cartData) {
+      localStorage.setItem('localCartData', JSON.stringify([data]));
+    } else {
+      earlyCartData = JSON.parse(cartData);
+      earlyCartData.push(data);
+      localStorage.setItem('localCartData', JSON.stringify(earlyCartData));
+    }
+  }
 }
