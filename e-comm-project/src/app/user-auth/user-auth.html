@@ -37,6 +37,9 @@
   } @if (showLoginForm) {
   <div class="user-login">
     <h1>User Login</h1>
+
+    <p class="error-msg">{{ invalidUserErrorMsg }}</p>
+
     <form
       class="common-form"
       #userLoginForm="ngForm"
@@ -48,15 +51,30 @@
         placeholder="Enter User Email"
         name="email"
         ngModel
+        #email="ngModel"
+        required
+        email
       />
+      @if (email.invalid && email.touched) {
+      <p class="invalid-input"><span>Please enter valid email</span></p>
+      }
       <input
         type="password"
         class="form-input"
         placeholder="Enter User Password"
         name="password"
         ngModel
+        #password="ngModel"
+        required
+        minlength="2"
+        maxlength="20"
       />
-      <button class="form-button">Login</button>
+      @if (password.invalid && password.touched) {
+      <p class="invalid-input"><span>Please enter valid password</span></p>
+      }
+      <button [disabled]="userLoginForm.invalid" class="form-button">
+        Login
+      </button>
       <a class="auth-toggle-link" (click)="openSignUp()"
         >Don't have an account? Click to Signup</a
       >

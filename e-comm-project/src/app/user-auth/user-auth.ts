@@ -11,6 +11,8 @@ import { User } from '../services/user';
 })
 export class UserAuth implements OnInit {
   showLoginForm: boolean = false;
+
+  invalidUserErrorMsg: string = '';
   constructor(private user: User) {}
 
   ngOnInit(): void {
@@ -23,6 +25,11 @@ export class UserAuth implements OnInit {
 
   userLogin(data: login) {
     this.user.userLogin(data);
+    this.user.invalidUserAuth.subscribe((result) => {
+      if (result) {
+        this.invalidUserErrorMsg = 'User does not exist';
+      }
+    });
   }
 
   openLogin() {

@@ -55,3 +55,14 @@ h1 {
   background-color: black;
   border-radius: 5px;
 }
+
+.invalid-input {
+  color: red;
+  font-size: 12px;
+  transform: translateY(-20px);
+  text-align: left;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
