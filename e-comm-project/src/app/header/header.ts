@@ -30,6 +30,7 @@ export class Header implements OnInit {
         } else if (localStorage.getItem('user')) {
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
+          this.product.getCartList(userData.id);
           this.userName = userData.name;
           this.menuType = 'user';
         } else {

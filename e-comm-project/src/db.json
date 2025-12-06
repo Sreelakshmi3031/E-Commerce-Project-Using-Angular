@@ -263,7 +263,30 @@
       "productId": "ae7d",
       "userId": 1,
       "id": 6
+    },
+    {
+      "name": "Samsung",
+      "price": "500000",
+      "color": "Blue",
+      "category": "Mobile",
+      "description": "Samsung Series",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/2501/gallery/levant-galaxy-s25-s938-sm-s938bzbimea-thumb-544743410",
+      "quantity": 1,
+      "userId": 1,
+      "productId": "4faf",
+      "id": 7
+    },
+    {
+      "name": "Hp Laptop",
+      "price": "50000",
+      "color": "Grey",
+      "category": "Laptop",
+      "description": "HP Laptop",
+      "image": "https://www.hp.com/content/dam/sites/worldwide/personal-computers/consumer/laptops-and-2-in-1s/new/bf-updates/media@2x1.jpg",
+      "quantity": 1,
+      "userId": 1,
+      "productId": "ae7d",
+      "id": 8
     }
-    
   ]
 }
