@@ -10,6 +10,7 @@ import { ProductDetails } from './product-details/product-details';
 import { UserAuth } from './user-auth/user-auth';
 import { CartPage } from './cart-page/cart-page';
 import { Checkout } from './checkout/checkout';
+import { MyOrders } from './my-orders/my-orders';
 
 export const routes: Routes = [
   {
@@ -54,5 +55,9 @@ export const routes: Routes = [
   {
     component: Checkout,
     path: 'checkout',
+  },
+  {
+    component: MyOrders,
+    path: 'my-orders',
   },
 ];
