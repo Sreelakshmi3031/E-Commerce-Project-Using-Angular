@@ -13,6 +13,7 @@ body {
 
 h1 {
   color: blue;
+  text-align: center;
 }
 
 .common-form {
@@ -65,4 +66,8 @@ h1 {
 
 button:disabled {
   cursor: not-allowed;
+}
+
+.max-width {
+  width: 100%;
 }

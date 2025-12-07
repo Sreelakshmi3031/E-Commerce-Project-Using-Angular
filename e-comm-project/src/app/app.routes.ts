@@ -9,6 +9,7 @@ import { Search } from './search/search';
 import { ProductDetails } from './product-details/product-details';
 import { UserAuth } from './user-auth/user-auth';
 import { CartPage } from './cart-page/cart-page';
+import { Checkout } from './checkout/checkout';
 
 export const routes: Routes = [
   {
@@ -49,5 +50,9 @@ export const routes: Routes = [
   {
     component: CartPage,
     path: 'cart-page',
+  },
+  {
+    component: Checkout,
+    path: 'checkout',
   },
 ];
