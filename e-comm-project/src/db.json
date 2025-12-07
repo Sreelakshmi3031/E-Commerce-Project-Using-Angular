@@ -204,5 +204,15 @@
       "productId": "e1d3",
       "id": 1
     }
+  ],
+  "orders": [
+    {
+      "email": "test@abc.com",
+      "address": "test",
+      "contact": "123",
+      "totalPrice": 120100,
+      "userId": 1,
+      "id": 1
+    }
   ]
 }
