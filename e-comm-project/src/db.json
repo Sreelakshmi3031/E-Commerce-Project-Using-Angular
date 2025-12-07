@@ -191,20 +191,7 @@
       "id": 2
     }
   ],
-  "cart": [
-    {
-      "name": "Iphone 17",
-      "price": "120000",
-      "color": "Pista Green",
-      "category": "Mobile",
-      "description": "Iphone New Series",
-      "image": "https://www.simplymac.com/wp-content/uploads/iphone-17-series.jpg",
-      "quantity": 1,
-      "userId": 1,
-      "productId": "e1d3",
-      "id": 1
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "email": "test@abc.com",
@@ -221,6 +208,14 @@
       "totalPrice": 120100,
       "userId": 1,
       "id": 2
+    },
+    {
+      "email": "test@abc.com",
+      "address": "test",
+      "contact": "1234",
+      "totalPrice": 120100,
+      "userId": 1,
+      "id": 3
     }
   ]
 }
