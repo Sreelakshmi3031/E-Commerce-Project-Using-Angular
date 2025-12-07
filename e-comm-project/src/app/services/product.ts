@@ -90,4 +90,12 @@ export class Product {
   removeFromCart(cartId: number | string) {
     return this.http.delete(`http://localhost:3000/cart/${cartId}`);
   }
+
+  cartDetails() {
+    let userStore = localStorage.getItem('user');
+    let userData = userStore && JSON.parse(userStore);
+    return this.http.get<cart[]>(
+      `http://localhost:3000/cart?userId=${userData.id}`
+    );
+  }
 }
