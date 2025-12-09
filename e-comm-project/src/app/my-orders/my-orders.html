@@ -35,7 +35,11 @@
       <span>In Process</span>
     </div>
     <div class="col-sm-2">
-      <span><button class="form-button">Cancel Order</button></span>
+      <span
+        ><button class="form-button" (click)="cancelOrder(item?.id)">
+          Cancel Order
+        </button></span
+      >
     </div>
   </div>
   }

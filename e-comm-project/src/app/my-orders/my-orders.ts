@@ -13,8 +13,19 @@ export class MyOrders implements OnInit {
   constructor(private product: Product) {}
 
   ngOnInit(): void {
+    this.getOrderList();
+  }
+
+  getOrderList() {
     this.product.getAllOrders().subscribe((response) => {
       this.orderData = response;
     });
+  }
+
+  cancelOrder(orderId: number | undefined) {
+    orderId &&
+      this.product.cancelOrder(orderId).subscribe((response) => {
+        this.getOrderList();
+      });
   }
 }
