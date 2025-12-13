@@ -1,3 +1,4 @@
+@if(cartData?.length){
 <div class="cart-page">
   <h1>Cart Page</h1>
   <div class="row">
@@ -16,7 +17,11 @@
         <li>
           <span>Quantity: {{ item?.quantity }}</span>
         </li>
-        <li><button class="form-button">Remove from Cart</button></li>
+        <li>
+          <button class="form-button" (click)="removeFromCart(item?.id)">
+            Remove from Cart
+          </button>
+        </li>
       </ul>
       }
     </div>
@@ -48,3 +53,6 @@
     </div>
   </div>
 </div>
+} @else {
+<h3>Cart is empty</h3>
+}

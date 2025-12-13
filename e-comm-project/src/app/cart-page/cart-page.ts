@@ -23,6 +23,10 @@ export class CartPage implements OnInit {
   constructor(private product: Product, private router: Router) {}
 
   ngOnInit(): void {
+    this.getCartDetails();
+  }
+
+  getCartDetails() {
     this.product.cartDetails().subscribe((result) => {
       this.cartData = result;
       let price = 0;
@@ -39,6 +43,21 @@ export class CartPage implements OnInit {
         this.priceSummary.delivery -
         this.priceSummary.discount;
     });
+  }
+  removeFromCart(cartId: string | number | undefined) {
+    if (cartId) {
+      if (localStorage.getItem('user')) {
+        let user = localStorage.getItem('user');
+        let userId = user && JSON.parse(user).id;
+        if (cartId) {
+          this.product.removeFromCart(cartId).subscribe((response) => {
+            if (response) {
+              this.getCartDetails();
+            }
+          });
+        }
+      }
+    }
   }
 
   checkout() {
